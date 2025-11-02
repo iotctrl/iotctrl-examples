@@ -1,0 +1,178 @@
+{
+  "name": "PL",
+  "nodes": [
+    {
+      "id": "UwlTfxZnpLXW3_g1pvhaw",
+      "position": {
+        "x": 583.2674694112321,
+        "y": 236.9612426713668
+      },
+      "data": {
+        "label": "Referência",
+        "value": 3,
+        "rotation": 90,
+        "outputType": "constant",
+        "parameters": {
+          "value": 3
+        }
+      },
+      "type": "setpoint",
+      "width": 237,
+      "height": 122,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 583.2674694112321,
+        "y": 236.9612426713668
+      },
+      "dragging": false
+    },
+    {
+      "id": "R9dyw1S8oAUkB0WrFzVq8",
+      "position": {
+        "x": 534.6824557048004,
+        "y": 875.8650590103891
+      },
+      "data": {
+        "label": "MS15",
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        }
+      },
+      "type": "ms15",
+      "width": 160,
+      "height": 67,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 534.6824557048004,
+        "y": 875.8650590103891
+      },
+      "dragging": false
+    },
+    {
+      "id": "4DzkXovVeOJJBPf5z3PJv",
+      "position": {
+        "x": 840.4932217426833,
+        "y": 367.4862475752909
+      },
+      "data": {
+        "label": "Configuração",
+        "rotation": 180,
+        "simTime": 10,
+        "params": {
+          "simTime": 10
+        }
+      },
+      "type": "simu",
+      "width": 205,
+      "height": 203,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 840.4932217426833,
+        "y": 367.4862475752909
+      },
+      "dragging": false
+    },
+    {
+      "id": "eFt_wqOUdyUkdG43vA7on",
+      "position": {
+        "x": 436.0220491388918,
+        "y": 672.7316439477987
+      },
+      "data": {
+        "label": "Avanço de Fase",
+        "params": {
+          "alpha": 3.333,
+          "beta": 14.9104,
+          "kc": 2.3903
+        },
+        "rotation": 270
+      },
+      "type": "pl",
+      "width": 517,
+      "height": 144,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 436.0220491388918,
+        "y": 672.7316439477987
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "UwlTfxZnpLXW3_g1pvhaw",
+      "sourceHandle": "output",
+      "target": "eFt_wqOUdyUkdG43vA7on",
+      "targetHandle": "setpoint",
+      "animated": true,
+      "id": "reactflow__edge-UwlTfxZnpLXW3_g1pvhawoutput-eFt_wqOUdyUkdG43vA7onsetpoint"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "eFt_wqOUdyUkdG43vA7on",
+      "sourceHandle": "output",
+      "target": "R9dyw1S8oAUkB0WrFzVq8",
+      "targetHandle": "VM",
+      "animated": true,
+      "id": "reactflow__edge-eFt_wqOUdyUkdG43vA7onoutput-R9dyw1S8oAUkB0WrFzVq8VM"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "R9dyw1S8oAUkB0WrFzVq8",
+      "sourceHandle": "VP",
+      "target": "eFt_wqOUdyUkdG43vA7on",
+      "targetHandle": "feedback",
+      "animated": true,
+      "id": "reactflow__edge-R9dyw1S8oAUkB0WrFzVq8VP-eFt_wqOUdyUkdG43vA7onfeedback"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {
+      "mass": 1
+    },
+    "description": ""
+  },
+  "timestamp": "2025-11-02T22:16:37.722Z"
+}

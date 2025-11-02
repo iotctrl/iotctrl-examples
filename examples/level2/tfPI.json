@@ -1,0 +1,226 @@
+{
+  "name": "PI FT MS15",
+  "nodes": [
+    {
+      "id": "axUYJsL7Fs9UHb6K2m3gw",
+      "position": {
+        "x": 256.7121337052173,
+        "y": 407.16071009075625
+      },
+      "data": {
+        "label": "MS15",
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        }
+      },
+      "type": "ms15",
+      "width": 320,
+      "height": 160,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 256.7121337052173,
+        "y": 407.16071009075625
+      },
+      "dragging": false
+    },
+    {
+      "id": "vXC41Lbv5ScjiC0fe520i",
+      "position": {
+        "x": -360.40241069398377,
+        "y": -270.3279454037688
+      },
+      "data": {
+        "label": "Referência",
+        "value": 3,
+        "rotation": 0,
+        "outputType": "step",
+        "parameters": {
+          "initialValue": 0,
+          "stepValue": 1,
+          "stepTime": 1
+        }
+      },
+      "type": "setpoint",
+      "width": 337,
+      "height": 469,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -360.40241069398377,
+        "y": -270.3279454037688
+      },
+      "dragging": false
+    },
+    {
+      "id": "JrFUYzJK43RIEYE3Qdha_",
+      "position": {
+        "x": 248.84617886477548,
+        "y": -65.04846599580966
+      },
+      "data": {
+        "label": "Função de Transferência",
+        "params": {
+          "numerator": [
+            0.401,
+            1.4475
+          ],
+          "denominator": [
+            0.277,
+            0
+          ],
+          "dt": 0.1
+        },
+        "rotation": 0
+      },
+      "type": "transfer",
+      "width": 276,
+      "height": 353,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 248.84617886477548,
+        "y": -65.04846599580966
+      },
+      "dragging": false
+    },
+    {
+      "id": "A7pflpQGAkSV8x82lQo1V",
+      "position": {
+        "x": -5.053873531126101,
+        "y": 9.62802000298489
+      },
+      "data": {
+        "label": "Subtração"
+      },
+      "type": "subtraction",
+      "width": 160,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -5.053873531126101,
+        "y": 9.62802000298489
+      },
+      "dragging": false
+    },
+    {
+      "id": "qyRITa75TQygJg5A32KXg",
+      "position": {
+        "x": 41.20827619179113,
+        "y": -306.34780481586813
+      },
+      "data": {
+        "label": "Configuração",
+        "rotation": 90,
+        "simTime": 5,
+        "params": {
+          "simTime": 5
+        }
+      },
+      "type": "simu",
+      "width": 204,
+      "height": 201,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 41.20827619179113,
+        "y": -306.34780481586813
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "JrFUYzJK43RIEYE3Qdha_",
+      "sourceHandle": "output",
+      "target": "axUYJsL7Fs9UHb6K2m3gw",
+      "targetHandle": "VM",
+      "animated": true,
+      "id": "reactflow__edge-JrFUYzJK43RIEYE3Qdha_output-axUYJsL7Fs9UHb6K2m3gwVM"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "vXC41Lbv5ScjiC0fe520i",
+      "sourceHandle": "output",
+      "target": "A7pflpQGAkSV8x82lQo1V",
+      "targetHandle": "input1",
+      "animated": true,
+      "id": "reactflow__edge-vXC41Lbv5ScjiC0fe520ioutput-A7pflpQGAkSV8x82lQo1Vinput1"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "A7pflpQGAkSV8x82lQo1V",
+      "sourceHandle": "output",
+      "target": "JrFUYzJK43RIEYE3Qdha_",
+      "targetHandle": "input",
+      "animated": true,
+      "id": "reactflow__edge-A7pflpQGAkSV8x82lQo1Voutput-JrFUYzJK43RIEYE3Qdha_input"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "axUYJsL7Fs9UHb6K2m3gw",
+      "sourceHandle": "VT",
+      "target": "A7pflpQGAkSV8x82lQo1V",
+      "targetHandle": "input2",
+      "animated": true,
+      "id": "reactflow__edge-axUYJsL7Fs9UHb6K2m3gwVT-A7pflpQGAkSV8x82lQo1Vinput2"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {
+      "mass": 1
+    },
+    "description": ""
+  },
+  "timestamp": "2025-10-06T13:39:15.186Z"
+}

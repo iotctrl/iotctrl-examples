@@ -1,0 +1,154 @@
+{
+  "name": "PID Controlled Transfer Function System",
+  "nodes": [
+    {
+      "id": "a01b2c3d-4e5f-6789-abcd-ef0123456789",
+      "type": "setpoint",
+      "position": {
+        "x": 349.5072346481238,
+        "y": -275.3301548965451
+      },
+      "data": {
+        "label": "Reference Setpoint",
+        "value": 3,
+        "outputType": "constant",
+        "parameters": {
+          "value": 3
+        }
+      },
+      "width": 338,
+      "height": 373,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 349.5072346481238,
+        "y": -275.3301548965451
+      },
+      "dragging": false
+    },
+    {
+      "id": "b1c2d3e4-f5a6-7890-bcde-f0123456789a",
+      "type": "pid",
+      "position": {
+        "x": 200,
+        "y": 250
+      },
+      "data": {
+        "label": "PID Controller",
+        "kp": 1,
+        "ki": 0.5,
+        "kd": 0.1,
+        "windup": 100,
+        "deadband_in": 0,
+        "deadband_out": 0,
+        "N": 10,
+        "params": {
+          "kp": 0.1,
+          "ki": 0.01,
+          "kd": 0.001,
+          "windupEnabled": true,
+          "windup": 100,
+          "deadband_in": 0,
+          "deadband_out": 0,
+          "N": 20
+        }
+      },
+      "width": 517,
+      "height": 227
+    },
+    {
+      "id": "c2d3e4f5-a6b7-8901-cdef-0123456789ab",
+      "type": "transfer",
+      "position": {
+        "x": 321.38211129847684,
+        "y": 554.0462019495728
+      },
+      "data": {
+        "label": "Plant Transfer Function",
+        "numerator": [
+          1
+        ],
+        "denominator": [
+          1,
+          1
+        ],
+        "dt": 0.1,
+        "params": {
+          "numerator": [
+            1
+          ],
+          "denominator": [
+            1,
+            1
+          ],
+          "dt": 0.1
+        }
+      },
+      "width": 277,
+      "height": 319,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 321.38211129847684,
+        "y": 554.0462019495728
+      },
+      "dragging": false
+    },
+    {
+      "id": "nB8dfiJqTNeOVVkiCNg1t",
+      "position": {
+        "x": 678.2604022400844,
+        "y": -98.66027343166715
+      },
+      "data": {
+        "label": "Configuração",
+        "rotation": 180,
+        "simTime": 20,
+        "params": {
+          "simTime": 20,
+          "sampleTime": 0.02
+        },
+        "sampleTime": 0.02
+      },
+      "type": "simu",
+      "width": 205,
+      "height": 203,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 678.2604022400844,
+        "y": -98.66027343166715
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "d3e4f5a6-b7c8-9012-def0-123456789abc",
+      "source": "a01b2c3d-4e5f-6789-abcd-ef0123456789",
+      "target": "b1c2d3e4-f5a6-7890-bcde-f0123456789a",
+      "sourceHandle": "output",
+      "targetHandle": "setpoint",
+      "type": "step"
+    },
+    {
+      "id": "e4f5a6b7-c8d9-0123-ef01-23456789abcd",
+      "source": "b1c2d3e4-f5a6-7890-bcde-f0123456789a",
+      "target": "c2d3e4f5-a6b7-8901-cdef-0123456789ab",
+      "sourceHandle": "output",
+      "targetHandle": "input",
+      "type": "step"
+    },
+    {
+      "id": "f5a6b7c8-d9e0-1234-f012-3456789abcde",
+      "source": "c2d3e4f5-a6b7-8901-cdef-0123456789ab",
+      "target": "b1c2d3e4-f5a6-7890-bcde-f0123456789a",
+      "sourceHandle": "output",
+      "targetHandle": "feedback",
+      "type": "step"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {},
+    "description": "A closed-loop control system with a PID controller regulating a transfer function plant."
+  },
+  "timestamp": "2025-11-02T22:05:12.969Z"
+}

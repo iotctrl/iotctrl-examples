@@ -1,0 +1,127 @@
+{
+  "name": "Speed Control Prototype",
+  "nodes": [
+    {
+      "id": "a1b2c3d4-e5f6-4789-a123-456789abcdef",
+      "type": "setpoint",
+      "position": {
+        "x": 740.5729109315245,
+        "y": -246.90046030477015
+      },
+      "data": {
+        "label": "Desired Speed (Setpoint)",
+        "outputType": "step",
+        "defaultParams": {
+          "initialValue": 0,
+          "stepValue": 10,
+          "stepTime": 5
+        },
+        "parameters": {}
+      },
+      "width": 338,
+      "height": 473,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 740.5729109315245,
+        "y": -246.90046030477015
+      },
+      "dragging": false
+    },
+    {
+      "id": "b2c3d4e5-f6a7-4890-b234-567890abcdef0",
+      "type": "pid",
+      "position": {
+        "x": 591.6053210335384,
+        "y": 293.82638681331366
+      },
+      "data": {
+        "label": "Speed Controller (PID)",
+        "kp": 1.5,
+        "ki": 0.2,
+        "kd": 0.1,
+        "windup": 10,
+        "deadband_in": 0.01,
+        "deadband_out": 0.01,
+        "N": 10,
+        "params": {
+          "kp": 0.1,
+          "ki": 0.01,
+          "kd": 0.001,
+          "windupEnabled": true,
+          "windup": 100,
+          "deadband_in": 0,
+          "deadband_out": 0,
+          "N": 20
+        }
+      },
+      "width": 517,
+      "height": 227,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 591.6053210335384,
+        "y": 293.82638681331366
+      },
+      "dragging": false
+    },
+    {
+      "id": "c3d4e5f6-a7b8-4901-c345-67890abcdef01",
+      "type": "ms15",
+      "position": {
+        "x": 690,
+        "y": 601.2
+      },
+      "data": {
+        "label": "Servomechanism (Plant)",
+        "lowerLimit": -12,
+        "upperLimit": 12,
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        }
+      },
+      "width": 320,
+      "height": 160,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 690,
+        "y": 601.2
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "d4e5f6a7-b8c9-4012-d456-7890abcdef012",
+      "source": "a1b2c3d4-e5f6-4789-a123-456789abcdef",
+      "target": "b2c3d4e5-f6a7-4890-b234-567890abcdef0",
+      "sourceHandle": "output",
+      "targetHandle": "setpoint",
+      "type": "step"
+    },
+    {
+      "id": "e5f6a7b8-c9d0-4123-e567-890abcdef0123",
+      "source": "b2c3d4e5-f6a7-4890-b234-567890abcdef0",
+      "target": "c3d4e5f6-a7b8-4901-c345-67890abcdef01",
+      "sourceHandle": "output",
+      "targetHandle": "VM",
+      "type": "step"
+    },
+    {
+      "id": "f6a7b8c9-d0e1-4234-f678-90abcdef01234",
+      "source": "c3d4e5f6-a7b8-4901-c345-67890abcdef01",
+      "target": "b2c3d4e5-f6a7-4890-b234-567890abcdef0",
+      "sourceHandle": "VT",
+      "targetHandle": "feedback",
+      "type": "step"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {},
+    "description": "A basic closed-loop speed control system using a PID controller to regulate the speed of a servomechanism based on a step setpoint."
+  },
+  "timestamp": "2025-11-02T22:18:53.535Z"
+}

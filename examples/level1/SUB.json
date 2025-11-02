@@ -1,0 +1,199 @@
+{
+  "name": "SUB",
+  "nodes": [
+    {
+      "id": "uxCFC5j6DwsERbEzo2aPf",
+      "position": {
+        "x": 486.29513423523474,
+        "y": 11.814107631303358
+      },
+      "data": {
+        "label": "Referência",
+        "value": 2,
+        "rotation": 90,
+        "outputType": "constant",
+        "parameters": {
+          "value": 2
+        }
+      },
+      "type": "setpoint",
+      "width": 236,
+      "height": 122,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 486.29513423523474,
+        "y": 11.814107631303358
+      },
+      "dragging": false
+    },
+    {
+      "id": "eTqPugNpvq62dRmUIvWt6",
+      "position": {
+        "x": 162.11523684568624,
+        "y": 226.35736132381822
+      },
+      "data": {
+        "label": "Referência",
+        "value": 1.5,
+        "rotation": 180,
+        "outputType": "constant",
+        "parameters": {
+          "value": 1.5
+        }
+      },
+      "type": "setpoint",
+      "width": 236,
+      "height": 122,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 162.11523684568624,
+        "y": 226.35736132381822
+      },
+      "dragging": false
+    },
+    {
+      "id": "0mooTzk_LurCTq6Bg1oyy",
+      "position": {
+        "x": 514.8072775613066,
+        "y": 570.877271610907
+      },
+      "data": {
+        "label": "MS15",
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        }
+      },
+      "type": "ms15",
+      "width": 160,
+      "height": 68,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 514.8072775613066,
+        "y": 570.877271610907
+      },
+      "dragging": false
+    },
+    {
+      "id": "nXmMx3xvo2kopSQ57fzT3",
+      "position": {
+        "x": 515.7052555408716,
+        "y": 412.34943097075126
+      },
+      "data": {
+        "label": "Subtração"
+      },
+      "type": "subtraction",
+      "width": 120,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 515.7052555408716,
+        "y": 412.34943097075126
+      },
+      "dragging": false
+    },
+    {
+      "id": "-8bqawUROe9VOdZXP0j3R",
+      "position": {
+        "x": 170.08279458975994,
+        "y": 12.590835079963753
+      },
+      "data": {
+        "label": "Configuração",
+        "rotation": 90,
+        "simTime": 2,
+        "params": {
+          "simTime": 2,
+          "sampleTime": 0.001
+        },
+        "sampleTime": 0.001
+      },
+      "type": "simu",
+      "width": 205,
+      "height": 203,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 170.08279458975994,
+        "y": 12.590835079963753
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "uxCFC5j6DwsERbEzo2aPf",
+      "sourceHandle": "output",
+      "target": "nXmMx3xvo2kopSQ57fzT3",
+      "targetHandle": "input1",
+      "animated": true,
+      "id": "reactflow__edge-uxCFC5j6DwsERbEzo2aPfoutput-nXmMx3xvo2kopSQ57fzT3input1"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "eTqPugNpvq62dRmUIvWt6",
+      "sourceHandle": "output",
+      "target": "nXmMx3xvo2kopSQ57fzT3",
+      "targetHandle": "input2",
+      "animated": true,
+      "id": "reactflow__edge-eTqPugNpvq62dRmUIvWt6output-nXmMx3xvo2kopSQ57fzT3input2"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "nXmMx3xvo2kopSQ57fzT3",
+      "sourceHandle": "output",
+      "target": "0mooTzk_LurCTq6Bg1oyy",
+      "targetHandle": "VM",
+      "animated": true,
+      "id": "reactflow__edge-nXmMx3xvo2kopSQ57fzT3output-0mooTzk_LurCTq6Bg1oyyVM"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {
+      "mass": 1
+    },
+    "description": ""
+  },
+  "timestamp": "2025-11-02T22:07:50.814Z"
+}

@@ -1,0 +1,230 @@
+{
+  "name": "Hinf FT 3or MS15",
+  "nodes": [
+    {
+      "id": "axUYJsL7Fs9UHb6K2m3gw",
+      "position": {
+        "x": 302.7121337052173,
+        "y": 333.16071009075625
+      },
+      "data": {
+        "label": "MS15",
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        }
+      },
+      "type": "ms15",
+      "width": 320,
+      "height": 160,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 302.7121337052173,
+        "y": 333.16071009075625
+      },
+      "dragging": false
+    },
+    {
+      "id": "vXC41Lbv5ScjiC0fe520i",
+      "position": {
+        "x": -360.40241069398377,
+        "y": -270.3279454037688
+      },
+      "data": {
+        "label": "Referência",
+        "value": 3,
+        "rotation": 0,
+        "outputType": "step",
+        "parameters": {
+          "initialValue": 0,
+          "stepValue": 1,
+          "stepTime": 1
+        }
+      },
+      "type": "setpoint",
+      "width": 337,
+      "height": 469,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -360.40241069398377,
+        "y": -270.3279454037688
+      },
+      "dragging": false
+    },
+    {
+      "id": "A7pflpQGAkSV8x82lQo1V",
+      "position": {
+        "x": -5.053873531126101,
+        "y": 9.62802000298489
+      },
+      "data": {
+        "label": "Subtração"
+      },
+      "type": "subtraction",
+      "width": 160,
+      "height": 112,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -5.053873531126101,
+        "y": 9.62802000298489
+      },
+      "dragging": false
+    },
+    {
+      "id": "qyRITa75TQygJg5A32KXg",
+      "position": {
+        "x": 41.20827619179113,
+        "y": -306.34780481586813
+      },
+      "data": {
+        "label": "Configuração",
+        "rotation": 180,
+        "simTime": 10,
+        "params": {
+          "simTime": 5
+        }
+      },
+      "type": "simu",
+      "width": 204,
+      "height": 201,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 41.20827619179113,
+        "y": -306.34780481586813
+      },
+      "dragging": false
+    },
+    {
+      "id": "l4RU6KbsAChDCVkLgm0Eu",
+      "position": {
+        "x": 321.75486760913236,
+        "y": -311.99351074146216
+      },
+      "data": {
+        "label": "Função de Transferência",
+        "params": {
+          "numerator": [
+            0.521,
+            8.924,
+            12.736,
+            1.258
+          ],
+          "denominator": [
+            1,
+            15.283,
+            42.167,
+            0.325
+          ],
+          "dt": 0.1
+        },
+        "rotation": 90
+      },
+      "type": "transfer",
+      "width": 276,
+      "height": 495,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 321.75486760913236,
+        "y": -311.99351074146216
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "vXC41Lbv5ScjiC0fe520i",
+      "sourceHandle": "output",
+      "target": "A7pflpQGAkSV8x82lQo1V",
+      "targetHandle": "input1",
+      "animated": true,
+      "id": "reactflow__edge-vXC41Lbv5ScjiC0fe520ioutput-A7pflpQGAkSV8x82lQo1Vinput1"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "A7pflpQGAkSV8x82lQo1V",
+      "sourceHandle": "output",
+      "target": "l4RU6KbsAChDCVkLgm0Eu",
+      "targetHandle": "input",
+      "animated": true,
+      "id": "reactflow__edge-A7pflpQGAkSV8x82lQo1Voutput-l4RU6KbsAChDCVkLgm0Euinput"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "l4RU6KbsAChDCVkLgm0Eu",
+      "sourceHandle": "output",
+      "target": "axUYJsL7Fs9UHb6K2m3gw",
+      "targetHandle": "VM",
+      "animated": true,
+      "id": "reactflow__edge-l4RU6KbsAChDCVkLgm0Euoutput-axUYJsL7Fs9UHb6K2m3gwVM"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "axUYJsL7Fs9UHb6K2m3gw",
+      "sourceHandle": "VP",
+      "target": "A7pflpQGAkSV8x82lQo1V",
+      "targetHandle": "input2",
+      "animated": true,
+      "id": "reactflow__edge-axUYJsL7Fs9UHb6K2m3gwVP-A7pflpQGAkSV8x82lQo1Vinput2"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {
+      "mass": 1
+    },
+    "description": ""
+  },
+  "timestamp": "2025-10-06T18:24:21.012Z"
+}

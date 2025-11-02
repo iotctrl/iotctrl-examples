@@ -1,0 +1,229 @@
+{
+  "name": "tfPID Transfer Function",
+  "nodes": [
+    {
+      "id": "a01b2c3d-4e5f-6789-abcd-ef0123456789",
+      "type": "setpoint",
+      "position": {
+        "x": 24.39602372776693,
+        "y": -234.42343761852845
+      },
+      "data": {
+        "label": "Reference Setpoint",
+        "value": 3,
+        "outputType": "constant",
+        "parameters": {
+          "value": 3
+        }
+      },
+      "width": 235,
+      "height": 122,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 24.39602372776693,
+        "y": -234.42343761852845
+      },
+      "dragging": false
+    },
+    {
+      "id": "c2d3e4f5-a6b7-8901-cdef-0123456789ab",
+      "type": "transfer",
+      "position": {
+        "x": 200,
+        "y": 520
+      },
+      "data": {
+        "label": "Plant Transfer Function",
+        "numerator": [
+          1
+        ],
+        "denominator": [
+          1,
+          1
+        ],
+        "dt": 0.1,
+        "params": {
+          "numerator": [
+            1
+          ],
+          "denominator": [
+            1,
+            1
+          ],
+          "dt": 0.1
+        }
+      },
+      "width": 277,
+      "height": 317
+    },
+    {
+      "id": "nB8dfiJqTNeOVVkiCNg1t",
+      "position": {
+        "x": 378.0331743091142,
+        "y": -203.7516297251949
+      },
+      "data": {
+        "label": "Configuração",
+        "rotation": 270,
+        "simTime": 15,
+        "params": {
+          "simTime": 20,
+          "sampleTime": 0.02
+        },
+        "sampleTime": 0.01
+      },
+      "type": "simu",
+      "width": 205,
+      "height": 203,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 378.0331743091142,
+        "y": -203.7516297251949
+      },
+      "dragging": false
+    },
+    {
+      "id": "6aOR0Oxf-0nxdqP9cBywl",
+      "position": {
+        "x": 55.754190483122954,
+        "y": 182.68541663536655
+      },
+      "data": {
+        "label": "Subtração"
+      },
+      "type": "subtraction",
+      "width": 160,
+      "height": 113,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 55.754190483122954,
+        "y": 182.68541663536655
+      },
+      "dragging": false
+    },
+    {
+      "id": "SGF6uCeD5MLcyrgczQSHI",
+      "position": {
+        "x": 394.4458827908153,
+        "y": 81.69628908128007
+      },
+      "data": {
+        "label": "Função de Transferência",
+        "params": {
+          "numerator": [
+            1,
+            1,
+            1
+          ],
+          "denominator": [
+            1,
+            0
+          ],
+          "dt": 0.1
+        },
+        "rotation": 180
+      },
+      "type": "transfer",
+      "width": 277,
+      "height": 391,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 394.4458827908153,
+        "y": 81.69628908128007
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "a01b2c3d-4e5f-6789-abcd-ef0123456789",
+      "sourceHandle": "output",
+      "target": "6aOR0Oxf-0nxdqP9cBywl",
+      "targetHandle": "input1",
+      "animated": true,
+      "id": "reactflow__edge-a01b2c3d-4e5f-6789-abcd-ef0123456789output-6aOR0Oxf-0nxdqP9cBywlinput1"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "c2d3e4f5-a6b7-8901-cdef-0123456789ab",
+      "sourceHandle": "output",
+      "target": "6aOR0Oxf-0nxdqP9cBywl",
+      "targetHandle": "input2",
+      "animated": true,
+      "id": "reactflow__edge-c2d3e4f5-a6b7-8901-cdef-0123456789aboutput-6aOR0Oxf-0nxdqP9cBywlinput2"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "6aOR0Oxf-0nxdqP9cBywl",
+      "sourceHandle": "output",
+      "target": "SGF6uCeD5MLcyrgczQSHI",
+      "targetHandle": "input",
+      "animated": true,
+      "id": "reactflow__edge-6aOR0Oxf-0nxdqP9cBywloutput-SGF6uCeD5MLcyrgczQSHIinput"
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "SGF6uCeD5MLcyrgczQSHI",
+      "sourceHandle": "output",
+      "target": "c2d3e4f5-a6b7-8901-cdef-0123456789ab",
+      "targetHandle": "input",
+      "animated": true,
+      "id": "reactflow__edge-SGF6uCeD5MLcyrgczQSHIoutput-c2d3e4f5-a6b7-8901-cdef-0123456789abinput"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {},
+    "description": "A closed-loop control system with a PID controller regulating a transfer function plant."
+  },
+  "timestamp": "2025-11-02T22:11:10.532Z"
+}

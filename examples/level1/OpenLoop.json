@@ -1,0 +1,111 @@
+{
+  "name": "OpenLoop",
+  "nodes": [
+    {
+      "id": "UwlTfxZnpLXW3_g1pvhaw",
+      "position": {
+        "x": 621.3192536145289,
+        "y": 521.8711211009786
+      },
+      "data": {
+        "label": "Referência",
+        "value": 3,
+        "rotation": 90,
+        "outputType": "constant",
+        "parameters": {
+          "value": 3
+        }
+      },
+      "type": "setpoint",
+      "width": 235,
+      "height": 122,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 621.3192536145289,
+        "y": 521.8711211009786
+      },
+      "dragging": false
+    },
+    {
+      "id": "R9dyw1S8oAUkB0WrFzVq8",
+      "position": {
+        "x": 570.5654745372423,
+        "y": 969.1476288116856
+      },
+      "data": {
+        "label": "MS15",
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        }
+      },
+      "type": "ms15",
+      "width": 320,
+      "height": 160,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 570.5654745372423,
+        "y": 969.1476288116856
+      },
+      "dragging": false
+    },
+    {
+      "id": "4DzkXovVeOJJBPf5z3PJv",
+      "position": {
+        "x": 867.8097448216221,
+        "y": 615.0973116134114
+      },
+      "data": {
+        "label": "Configuração",
+        "rotation": 180,
+        "simTime": 10,
+        "params": {
+          "simTime": 10
+        }
+      },
+      "type": "simu",
+      "width": 205,
+      "height": 203,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 867.8097448216221,
+        "y": 615.0973116134114
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "UwlTfxZnpLXW3_g1pvhaw",
+      "sourceHandle": "output",
+      "target": "R9dyw1S8oAUkB0WrFzVq8",
+      "targetHandle": "VM",
+      "animated": true,
+      "id": "reactflow__edge-UwlTfxZnpLXW3_g1pvhawoutput-R9dyw1S8oAUkB0WrFzVq8VM"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {
+      "mass": 1
+    },
+    "description": ""
+  },
+  "timestamp": "2025-11-02T22:17:39.668Z"
+}
