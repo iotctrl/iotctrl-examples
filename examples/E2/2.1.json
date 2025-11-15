@@ -36,9 +36,9 @@
       },
       "data": {
         "label": "Speed Controller (PID)",
-        "kp": 1.5,
-        "ki": 0.2,
-        "kd": 0.1,
+        "Kc": 1.5,
+        "Ti": 0.2,
+        "Td": 0.1,
         "windup": 10,
         "deadband_in": 0.01,
         "deadband_out": 0.01,
