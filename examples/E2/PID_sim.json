@@ -34,9 +34,9 @@
       },
       "data": {
         "label": "PID Controller",
-        "kp": 1,
-        "ki": 0.5,
-        "kd": 0.1,
+        "Kc": 1,
+        "Ti": 0.5,
+        "Td": 0.1,
         "windup": 100,
         "deadband_in": 0,
         "deadband_out": 0,

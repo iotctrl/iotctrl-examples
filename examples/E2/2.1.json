@@ -44,9 +44,9 @@
         "deadband_out": 0.01,
         "N": 10,
         "params": {
-          "kp": 0.1,
-          "ki": 0.01,
-          "kd": 0.001,
+          "Kc": 0.1,
+          "Ti": 0.01,
+          "Td": 0.001,
           "windupEnabled": true,
           "windup": 100,
           "deadband_in": 0,
