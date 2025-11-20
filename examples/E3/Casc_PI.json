@@ -1,0 +1,264 @@
+{
+  "name": "Cascata",
+  "nodes": [
+    {
+      "id": "QO0IDJdtE_jKTxQAlceg_",
+      "position": {
+        "x": 340,
+        "y": 292.66668701171875
+      },
+      "data": {
+        "label": "Servomecanismo",
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        },
+        "init": 0
+      },
+      "type": "ms15",
+      "width": 320,
+      "height": 160,
+      "selected": false
+    },
+    {
+      "id": "RogA5WgxWtWcfAb_oUjXu",
+      "position": {
+        "x": 347.1551368902002,
+        "y": -11.06397342675077
+      },
+      "data": {
+        "label": "PI",
+        "params": {
+          "kp": 4.8621,
+          "ki": 0.3,
+          "kd": 0,
+          "windupEnabled": true,
+          "windup": 5,
+          "deadband_in": 0,
+          "deadband_out": 0,
+          "N": 20
+        },
+        "rotation": 180
+      },
+      "type": "pi",
+      "width": 333,
+      "height": 227,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 347.1551368902002,
+        "y": -11.06397342675077
+      },
+      "dragging": false
+    },
+    {
+      "id": "yxYECxWsB7W_j7t4-G6f2",
+      "position": {
+        "x": -137.40685447886048,
+        "y": -236.01981221832455
+      },
+      "data": {
+        "label": "Referência",
+        "outputType": "square",
+        "parameters": {
+          "amplitude": 3,
+          "frequency": 0.25,
+          "offset": 0
+        },
+        "rotation": 90
+      },
+      "type": "setpoint",
+      "width": 338,
+      "height": 469,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -137.40685447886048,
+        "y": -236.01981221832455
+      },
+      "dragging": false
+    },
+    {
+      "id": "UWfDXJKZBlNKg9rZQH5EL",
+      "position": {
+        "x": 420.70922295976965,
+        "y": -209.5688132875837
+      },
+      "data": {
+        "label": "Ganho",
+        "gain": 0.4916,
+        "rotation": 90
+      },
+      "type": "gain",
+      "width": 181,
+      "height": 136,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 420.70922295976965,
+        "y": -209.5688132875837
+      },
+      "dragging": false
+    },
+    {
+      "id": "0voS5W36LNYdSweRbR6a4",
+      "position": {
+        "x": 149.58648391967694,
+        "y": -123.60306676267624
+      },
+      "data": {
+        "label": "Subtração"
+      },
+      "type": "subtraction",
+      "width": 160,
+      "height": 113,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 149.58648391967694,
+        "y": -123.60306676267624
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "QO0IDJdtE_jKTxQAlceg_",
+      "sourceHandle": "VT",
+      "target": "RogA5WgxWtWcfAb_oUjXu",
+      "targetHandle": "feedback",
+      "animated": true,
+      "id": "reactflow__edge-QO0IDJdtE_jKTxQAlceg_VT-RogA5WgxWtWcfAb_oUjXufeedback",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "yxYECxWsB7W_j7t4-G6f2",
+      "sourceHandle": "output",
+      "target": "0voS5W36LNYdSweRbR6a4",
+      "targetHandle": "input1",
+      "animated": true,
+      "id": "reactflow__edge-yxYECxWsB7W_j7t4-G6f2output-0voS5W36LNYdSweRbR6a4input1",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "QO0IDJdtE_jKTxQAlceg_",
+      "sourceHandle": "VP",
+      "target": "0voS5W36LNYdSweRbR6a4",
+      "targetHandle": "input2",
+      "animated": true,
+      "id": "reactflow__edge-QO0IDJdtE_jKTxQAlceg_VP-0voS5W36LNYdSweRbR6a4input2",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "0voS5W36LNYdSweRbR6a4",
+      "sourceHandle": "output",
+      "target": "UWfDXJKZBlNKg9rZQH5EL",
+      "targetHandle": "input",
+      "animated": true,
+      "id": "reactflow__edge-0voS5W36LNYdSweRbR6a4output-UWfDXJKZBlNKg9rZQH5ELinput",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "UWfDXJKZBlNKg9rZQH5EL",
+      "sourceHandle": "output",
+      "target": "RogA5WgxWtWcfAb_oUjXu",
+      "targetHandle": "setpoint",
+      "animated": true,
+      "id": "reactflow__edge-UWfDXJKZBlNKg9rZQH5ELoutput-RogA5WgxWtWcfAb_oUjXusetpoint",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "RogA5WgxWtWcfAb_oUjXu",
+      "sourceHandle": "output",
+      "target": "QO0IDJdtE_jKTxQAlceg_",
+      "targetHandle": "VM",
+      "animated": true,
+      "id": "reactflow__edge-RogA5WgxWtWcfAb_oUjXuoutput-QO0IDJdtE_jKTxQAlceg_VM"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {
+      "mass": 1
+    },
+    "description": ""
+  },
+  "timestamp": "2025-11-20T12:34:50.179Z"
+}
