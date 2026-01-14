@@ -4,25 +4,27 @@
     {
       "id": "UwlTfxZnpLXW3_g1pvhaw",
       "position": {
-        "x": 583.2674694112321,
-        "y": 236.9612426713668
+        "x": 240,
+        "y": 18
       },
       "data": {
         "label": "Referência",
         "value": 3,
-        "rotation": 90,
-        "outputType": "constant",
+        "rotation": 270,
+        "outputType": "step",
         "parameters": {
-          "value": 3
+          "initialValue": 0,
+          "stepValue": 2.5,
+          "stepTime": 1
         }
       },
       "type": "setpoint",
-      "width": 237,
-      "height": 122,
+      "width": 346,
+      "height": 596,
       "selected": false,
       "positionAbsolute": {
-        "x": 583.2674694112321,
-        "y": 236.9612426713668
+        "x": 240,
+        "y": 18
       },
       "dragging": false
     },
@@ -40,11 +42,12 @@
           "n": 0.111,
           "Kt": 0.017,
           "Kp": 1.7
-        }
+        },
+        "init": 0
       },
       "type": "ms15",
-      "width": 160,
-      "height": 67,
+      "width": 320,
+      "height": 160,
       "selected": false,
       "positionAbsolute": {
         "x": 534.6824557048004,
@@ -55,24 +58,24 @@
     {
       "id": "4DzkXovVeOJJBPf5z3PJv",
       "position": {
-        "x": 840.4932217426833,
-        "y": 367.4862475752909
+        "x": 740,
+        "y": 42
       },
       "data": {
         "label": "Configuração",
-        "rotation": 180,
-        "simTime": 10,
+        "rotation": 270,
+        "simTime": 3,
         "params": {
           "simTime": 10
         }
       },
       "type": "simu",
-      "width": 205,
-      "height": 203,
+      "width": 177,
+      "height": 252,
       "selected": false,
       "positionAbsolute": {
-        "x": 840.4932217426833,
-        "y": 367.4862475752909
+        "x": 740,
+        "y": 42
       },
       "dragging": false
     },
@@ -92,8 +95,8 @@
         "rotation": 270
       },
       "type": "pl",
-      "width": 517,
-      "height": 144,
+      "width": 480,
+      "height": 173,
       "selected": false,
       "dragging": false,
       "positionAbsolute": {
@@ -122,7 +125,8 @@
       "target": "eFt_wqOUdyUkdG43vA7on",
       "targetHandle": "setpoint",
       "animated": true,
-      "id": "reactflow__edge-UwlTfxZnpLXW3_g1pvhawoutput-eFt_wqOUdyUkdG43vA7onsetpoint"
+      "id": "reactflow__edge-UwlTfxZnpLXW3_g1pvhawoutput-eFt_wqOUdyUkdG43vA7onsetpoint",
+      "selected": false
     },
     {
       "type": "step",
@@ -143,7 +147,8 @@
       "target": "R9dyw1S8oAUkB0WrFzVq8",
       "targetHandle": "VM",
       "animated": true,
-      "id": "reactflow__edge-eFt_wqOUdyUkdG43vA7onoutput-R9dyw1S8oAUkB0WrFzVq8VM"
+      "id": "reactflow__edge-eFt_wqOUdyUkdG43vA7onoutput-R9dyw1S8oAUkB0WrFzVq8VM",
+      "selected": false
     },
     {
       "type": "step",
@@ -164,7 +169,8 @@
       "target": "eFt_wqOUdyUkdG43vA7on",
       "targetHandle": "feedback",
       "animated": true,
-      "id": "reactflow__edge-R9dyw1S8oAUkB0WrFzVq8VP-eFt_wqOUdyUkdG43vA7onfeedback"
+      "id": "reactflow__edge-R9dyw1S8oAUkB0WrFzVq8VP-eFt_wqOUdyUkdG43vA7onfeedback",
+      "selected": false
     }
   ],
   "systemModel": {
@@ -174,5 +180,5 @@
     },
     "description": ""
   },
-  "timestamp": "2025-11-02T22:16:37.722Z"
+  "timestamp": "2025-12-24T18:46:45.692Z"
 }

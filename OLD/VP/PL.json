@@ -1,66 +1,36 @@
 {
-  "name": "MFC",
+  "name": "PL",
   "nodes": [
     {
       "id": "UwlTfxZnpLXW3_g1pvhaw",
       "position": {
-        "x": 370,
-        "y": -452
+        "x": 583.2674694112321,
+        "y": 236.9612426713668
       },
       "data": {
         "label": "Referência",
         "value": 3,
         "rotation": 90,
-        "outputType": "step",
+        "outputType": "constant",
         "parameters": {
-          "initialValue": 0,
-          "stepValue": 2.5,
-          "stepTime": 1
+          "value": 3
         }
       },
       "type": "setpoint",
-      "width": 346,
-      "height": 596,
+      "width": 237,
+      "height": 122,
       "selected": false,
       "positionAbsolute": {
-        "x": 370,
-        "y": -452
-      },
-      "dragging": false
-    },
-    {
-      "id": "xTP0FMhzXMcbxoEs20uO_",
-      "position": {
-        "x": 421,
-        "y": 585
-      },
-      "data": {
-        "label": "MFC",
-        "params": {
-          "lambda": 30,
-          "alpha": 9,
-          "T": 1,
-          "windupEnabled": true,
-          "windup": 5,
-          "phi": 0
-        },
-        "rotation": 180
-      },
-      "type": "mfc",
-      "width": 480,
-      "height": 278,
-      "selected": false,
-      "positionAbsolute": {
-        "x": 421,
-        "y": 585
+        "x": 583.2674694112321,
+        "y": 236.9612426713668
       },
       "dragging": false
     },
     {
       "id": "R9dyw1S8oAUkB0WrFzVq8",
       "position": {
-        "x": 570.5654745372423,
-        "y": 969.1476288116856
+        "x": 534.6824557048004,
+        "y": 875.8650590103891
       },
       "data": {
         "label": "MS15",
@@ -70,42 +40,66 @@
           "n": 0.111,
           "Kt": 0.017,
           "Kp": 1.7
-        },
-        "init": 0
+        }
       },
       "type": "ms15",
-      "width": 320,
-      "height": 160,
+      "width": 160,
+      "height": 67,
       "selected": false,
       "positionAbsolute": {
-        "x": 570.5654745372423,
-        "y": 969.1476288116856
+        "x": 534.6824557048004,
+        "y": 875.8650590103891
       },
       "dragging": false
     },
     {
-      "id": "qFoi9sh6bV32I_vShoJt-",
+      "id": "4DzkXovVeOJJBPf5z3PJv",
       "position": {
-        "x": 872,
-        "y": -360
+        "x": 840.4932217426833,
+        "y": 367.4862475752909
       },
       "data": {
-        "label": "Configuration",
-        "rotation": 90,
-        "simTime": 3,
+        "label": "Configuração",
+        "rotation": 180,
+        "simTime": 10,
         "params": {
-          "simTime": 3
+          "simTime": 10
         }
       },
       "type": "simu",
-      "width": 177,
-      "height": 252,
+      "width": 205,
+      "height": 203,
       "selected": false,
       "positionAbsolute": {
-        "x": 872,
-        "y": -360
+        "x": 840.4932217426833,
+        "y": 367.4862475752909
       },
       "dragging": false
+    },
+    {
+      "id": "eFt_wqOUdyUkdG43vA7on",
+      "position": {
+        "x": 436.0220491388918,
+        "y": 672.7316439477987
+      },
+      "data": {
+        "label": "Avanço de Fase",
+        "params": {
+          "alpha": 3.333,
+          "beta": 14.9104,
+          "kc": 2.3903
+        },
+        "rotation": 270
+      },
+      "type": "pl",
+      "width": 517,
+      "height": 144,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 436.0220491388918,
+        "y": 672.7316439477987
+      }
     }
   ],
   "edges": [
@@ -125,11 +119,10 @@
       },
       "source": "UwlTfxZnpLXW3_g1pvhaw",
       "sourceHandle": "output",
-      "target": "xTP0FMhzXMcbxoEs20uO_",
+      "target": "eFt_wqOUdyUkdG43vA7on",
       "targetHandle": "setpoint",
       "animated": true,
-      "id": "reactflow__edge-UwlTfxZnpLXW3_g1pvhawoutput-xTP0FMhzXMcbxoEs20uO_setpoint",
-      "selected": false
+      "id": "reactflow__edge-UwlTfxZnpLXW3_g1pvhawoutput-eFt_wqOUdyUkdG43vA7onsetpoint"
     },
     {
       "type": "step",
@@ -145,13 +138,12 @@
         "offset": 20,
         "borderRadius": 0
       },
-      "source": "xTP0FMhzXMcbxoEs20uO_",
+      "source": "eFt_wqOUdyUkdG43vA7on",
       "sourceHandle": "output",
       "target": "R9dyw1S8oAUkB0WrFzVq8",
       "targetHandle": "VM",
       "animated": true,
-      "id": "reactflow__edge-xTP0FMhzXMcbxoEs20uO_output-R9dyw1S8oAUkB0WrFzVq8VM",
-      "selected": false
+      "id": "reactflow__edge-eFt_wqOUdyUkdG43vA7onoutput-R9dyw1S8oAUkB0WrFzVq8VM"
     },
     {
       "type": "step",
@@ -169,11 +161,10 @@
       },
       "source": "R9dyw1S8oAUkB0WrFzVq8",
       "sourceHandle": "VP",
-      "target": "xTP0FMhzXMcbxoEs20uO_",
+      "target": "eFt_wqOUdyUkdG43vA7on",
       "targetHandle": "feedback",
       "animated": true,
-      "id": "reactflow__edge-R9dyw1S8oAUkB0WrFzVq8VP-xTP0FMhzXMcbxoEs20uO_feedback",
-      "selected": false
+      "id": "reactflow__edge-R9dyw1S8oAUkB0WrFzVq8VP-eFt_wqOUdyUkdG43vA7onfeedback"
     }
   ],
   "systemModel": {
@@ -183,5 +174,5 @@
     },
     "description": ""
   },
-  "timestamp": "2025-12-24T19:26:12.274Z"
+  "timestamp": "2025-11-02T22:16:37.722Z"
 }
