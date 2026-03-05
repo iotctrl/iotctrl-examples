@@ -1,5 +1,5 @@
 {
-  "name": "-",
+  "name": "K",
   "nodes": [
     {
       "id": "uxCFC5j6DwsERbEzo2aPf",
@@ -10,10 +10,12 @@
       "data": {
         "label": "Referência",
         "value": 2,
-        "rotation": 90,
-        "outputType": "constant",
+        "rotation": 270,
+        "outputType": "step",
         "parameters": {
-          "value": 2
+          "initialValue": 0,
+          "stepValue": 2.5,
+          "stepTime": 1
         }
       },
       "type": "setpoint",
@@ -56,31 +58,31 @@
     {
       "id": "hJOwVBS7N852ioWKuhtUG",
       "position": {
-        "x": 27,
-        "y": -532
+        "x": 25,
+        "y": -434
       },
       "data": {
         "label": "Numeric",
         "outputType": "constant",
         "parameters": {
-          "value": 1
+          "value": 1.136
         },
-        "rotation": 90
+        "rotation": 180
       },
       "type": "numeric",
       "width": 346,
       "height": 426,
-      "selected": false,
+      "selected": true,
       "positionAbsolute": {
-        "x": 27,
-        "y": -532
+        "x": 25,
+        "y": -434
       },
       "dragging": false
     },
     {
       "id": "krHwMztgMf9EUZgKYkvOn",
       "position": {
-        "x": 555,
+        "x": 641,
         "y": -1186
       },
       "data": {
@@ -98,27 +100,27 @@
       "height": 252,
       "selected": false,
       "positionAbsolute": {
-        "x": 555,
+        "x": 641,
         "y": -1186
       },
       "dragging": false
     },
     {
-      "id": "cdDJocZd3b6ytnsHSKM-v",
+      "id": "WVLSwbds8eNQGCEoUacbH",
       "position": {
-        "x": 429,
-        "y": -524
+        "x": 423,
+        "y": -430
       },
       "data": {
-        "label": "Subtraction"
+        "label": "Multiplication"
       },
-      "type": "subtraction",
-      "width": 160,
+      "type": "multiplication",
+      "width": 168,
       "height": 122,
       "selected": false,
       "positionAbsolute": {
-        "x": 429,
-        "y": -524
+        "x": 423,
+        "y": -430
       },
       "dragging": false
     }
@@ -138,12 +140,35 @@
         "offset": 40,
         "borderRadius": 0
       },
+      "source": "WVLSwbds8eNQGCEoUacbH",
+      "sourceHandle": "output",
+      "target": "0mooTzk_LurCTq6Bg1oyy",
+      "targetHandle": "VM",
+      "animated": true,
+      "id": "reactflow__edge-WVLSwbds8eNQGCEoUacbHoutput-0mooTzk_LurCTq6Bg1oyyVM",
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
       "source": "uxCFC5j6DwsERbEzo2aPf",
       "sourceHandle": "output",
-      "target": "cdDJocZd3b6ytnsHSKM-v",
+      "target": "WVLSwbds8eNQGCEoUacbH",
       "targetHandle": "input1",
       "animated": true,
-      "id": "reactflow__edge-uxCFC5j6DwsERbEzo2aPfoutput-cdDJocZd3b6ytnsHSKM-vinput1"
+      "id": "reactflow__edge-uxCFC5j6DwsERbEzo2aPfoutput-WVLSwbds8eNQGCEoUacbHinput1",
+      "selected": false
     },
     {
       "type": "smoothstep",
@@ -161,31 +186,11 @@
       },
       "source": "hJOwVBS7N852ioWKuhtUG",
       "sourceHandle": "output",
-      "target": "cdDJocZd3b6ytnsHSKM-v",
+      "target": "WVLSwbds8eNQGCEoUacbH",
       "targetHandle": "input2",
       "animated": true,
-      "id": "reactflow__edge-hJOwVBS7N852ioWKuhtUGoutput-cdDJocZd3b6ytnsHSKM-vinput2"
-    },
-    {
-      "type": "smoothstep",
-      "style": {
-        "stroke": "var(--edge-stroke-color)",
-        "strokeWidth": 5
-      },
-      "markerEnd": {
-        "type": "arrowclosed",
-        "color": "var(--edge-arrow-color)"
-      },
-      "pathOptions": {
-        "offset": 40,
-        "borderRadius": 0
-      },
-      "source": "cdDJocZd3b6ytnsHSKM-v",
-      "sourceHandle": "output",
-      "target": "0mooTzk_LurCTq6Bg1oyy",
-      "targetHandle": "VM",
-      "animated": true,
-      "id": "reactflow__edge-cdDJocZd3b6ytnsHSKM-voutput-0mooTzk_LurCTq6Bg1oyyVM"
+      "id": "reactflow__edge-hJOwVBS7N852ioWKuhtUGoutput-WVLSwbds8eNQGCEoUacbHinput2",
+      "selected": false
     }
   ],
   "systemModel": {
@@ -195,5 +200,5 @@
     },
     "description": ""
   },
-  "timestamp": "2026-03-05T16:22:47.356Z"
+  "timestamp": "2026-03-05T16:47:05.109Z"
 }

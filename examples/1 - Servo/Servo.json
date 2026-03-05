@@ -1,36 +1,38 @@
 {
-  "name": "OpenLoop",
+  "name": "Servo",
   "nodes": [
     {
-      "id": "UwlTfxZnpLXW3_g1pvhaw",
+      "id": "uxCFC5j6DwsERbEzo2aPf",
       "position": {
-        "x": 621.3192536145289,
-        "y": 521.8711211009786
+        "x": 44,
+        "y": -1196
       },
       "data": {
         "label": "Referência",
-        "value": 3,
-        "rotation": 90,
-        "outputType": "constant",
+        "value": 2,
+        "rotation": 270,
+        "outputType": "step",
         "parameters": {
-          "value": 3
+          "initialValue": 0,
+          "stepValue": 2.5,
+          "stepTime": 0.1
         }
       },
       "type": "setpoint",
-      "width": 235,
-      "height": 122,
+      "width": 346,
+      "height": 596,
       "selected": false,
       "positionAbsolute": {
-        "x": 621.3192536145289,
-        "y": 521.8711211009786
+        "x": 44,
+        "y": -1196
       },
       "dragging": false
     },
     {
-      "id": "R9dyw1S8oAUkB0WrFzVq8",
+      "id": "0mooTzk_LurCTq6Bg1oyy",
       "position": {
-        "x": 570.5654745372423,
-        "y": 969.1476288116856
+        "x": 570,
+        "y": -209
       },
       "data": {
         "label": "MS15",
@@ -40,64 +42,67 @@
           "n": 0.111,
           "Kt": 0.017,
           "Kp": 1.7
-        }
+        },
+        "init": 0
       },
       "type": "ms15",
       "width": 320,
       "height": 160,
       "selected": false,
       "positionAbsolute": {
-        "x": 570.5654745372423,
-        "y": 969.1476288116856
+        "x": 570,
+        "y": -209
       },
       "dragging": false
     },
     {
-      "id": "4DzkXovVeOJJBPf5z3PJv",
+      "id": "krHwMztgMf9EUZgKYkvOn",
       "position": {
-        "x": 867.8097448216221,
-        "y": 615.0973116134114
+        "x": 555,
+        "y": -1186
       },
       "data": {
-        "label": "Configuração",
+        "label": "Configuration",
         "rotation": 180,
-        "simTime": 10,
+        "simTime": 2.1,
         "params": {
-          "simTime": 10
-        }
+          "simTime": 5,
+          "sampleTime": 0.02
+        },
+        "sampleTime": 0.01
       },
       "type": "simu",
-      "width": 205,
-      "height": 203,
+      "width": 177,
+      "height": 252,
       "selected": true,
       "positionAbsolute": {
-        "x": 867.8097448216221,
-        "y": 615.0973116134114
+        "x": 555,
+        "y": -1186
       },
       "dragging": false
     }
   ],
   "edges": [
     {
-      "type": "step",
+      "type": "smoothstep",
       "style": {
-        "stroke": "#555",
-        "strokeWidth": 2
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
       },
       "markerEnd": {
         "type": "arrowclosed",
-        "color": "#555"
+        "color": "var(--edge-arrow-color)"
       },
       "pathOptions": {
-        "offset": 20,
+        "offset": 40,
         "borderRadius": 0
       },
-      "source": "UwlTfxZnpLXW3_g1pvhaw",
+      "source": "uxCFC5j6DwsERbEzo2aPf",
       "sourceHandle": "output",
-      "target": "R9dyw1S8oAUkB0WrFzVq8",
+      "target": "0mooTzk_LurCTq6Bg1oyy",
       "targetHandle": "VM",
       "animated": true,
-      "id": "reactflow__edge-UwlTfxZnpLXW3_g1pvhawoutput-R9dyw1S8oAUkB0WrFzVq8VM"
+      "id": "reactflow__edge-uxCFC5j6DwsERbEzo2aPfoutput-0mooTzk_LurCTq6Bg1oyyVM"
     }
   ],
   "systemModel": {
@@ -107,5 +112,5 @@
     },
     "description": ""
   },
-  "timestamp": "2025-11-02T22:17:39.668Z"
+  "timestamp": "2026-03-05T16:26:09.797Z"
 }

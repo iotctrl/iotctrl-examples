@@ -1,11 +1,11 @@
 {
-  "name": "SUM",
+  "name": "+",
   "nodes": [
     {
       "id": "uxCFC5j6DwsERbEzo2aPf",
       "position": {
-        "x": 460,
-        "y": -16
+        "x": 44,
+        "y": -1196
       },
       "data": {
         "label": "Referência",
@@ -21,16 +21,16 @@
       "height": 373,
       "selected": false,
       "positionAbsolute": {
-        "x": 460,
-        "y": -16
+        "x": 44,
+        "y": -1196
       },
       "dragging": false
     },
     {
       "id": "kPquHu3kONhcg-EUylBGX",
       "position": {
-        "x": 437,
-        "y": 487
+        "x": 417,
+        "y": -551
       },
       "data": {
         "label": "Soma"
@@ -40,41 +40,16 @@
       "height": 88,
       "selected": false,
       "positionAbsolute": {
-        "x": 437,
-        "y": 487
-      },
-      "dragging": false
-    },
-    {
-      "id": "eTqPugNpvq62dRmUIvWt6",
-      "position": {
-        "x": 59,
-        "y": 323
-      },
-      "data": {
-        "label": "Referência",
-        "value": 1,
-        "rotation": 180,
-        "outputType": "constant",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "type": "setpoint",
-      "width": 338,
-      "height": 373,
-      "selected": false,
-      "positionAbsolute": {
-        "x": 59,
-        "y": 323
+        "x": 417,
+        "y": -551
       },
       "dragging": false
     },
     {
       "id": "0mooTzk_LurCTq6Bg1oyy",
       "position": {
-        "x": 582,
-        "y": 623
+        "x": 570,
+        "y": -209
       },
       "data": {
         "label": "MS15",
@@ -92,8 +67,58 @@
       "height": 160,
       "selected": false,
       "positionAbsolute": {
-        "x": 582,
-        "y": 623
+        "x": 570,
+        "y": -209
+      },
+      "dragging": false
+    },
+    {
+      "id": "hJOwVBS7N852ioWKuhtUG",
+      "position": {
+        "x": 27,
+        "y": -532
+      },
+      "data": {
+        "label": "Numeric",
+        "outputType": "constant",
+        "parameters": {
+          "value": 1
+        },
+        "rotation": 90
+      },
+      "type": "numeric",
+      "width": 346,
+      "height": 426,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 27,
+        "y": -532
+      },
+      "dragging": false
+    },
+    {
+      "id": "krHwMztgMf9EUZgKYkvOn",
+      "position": {
+        "x": 555,
+        "y": -1186
+      },
+      "data": {
+        "label": "Configuration",
+        "rotation": 90,
+        "simTime": 5,
+        "params": {
+          "simTime": 5,
+          "sampleTime": 0.02
+        },
+        "sampleTime": 0.02
+      },
+      "type": "simu",
+      "width": 177,
+      "height": 252,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 555,
+        "y": -1186
       },
       "dragging": false
     }
@@ -118,28 +143,8 @@
       "target": "kPquHu3kONhcg-EUylBGX",
       "targetHandle": "input1",
       "animated": true,
-      "id": "reactflow__edge-uxCFC5j6DwsERbEzo2aPfoutput-kPquHu3kONhcg-EUylBGXinput1"
-    },
-    {
-      "type": "smoothstep",
-      "style": {
-        "stroke": "var(--edge-stroke-color)",
-        "strokeWidth": 5
-      },
-      "markerEnd": {
-        "type": "arrowclosed",
-        "color": "var(--edge-arrow-color)"
-      },
-      "pathOptions": {
-        "offset": 40,
-        "borderRadius": 0
-      },
-      "source": "eTqPugNpvq62dRmUIvWt6",
-      "sourceHandle": "output",
-      "target": "kPquHu3kONhcg-EUylBGX",
-      "targetHandle": "input2",
-      "animated": true,
-      "id": "reactflow__edge-eTqPugNpvq62dRmUIvWt6output-kPquHu3kONhcg-EUylBGXinput2"
+      "id": "reactflow__edge-uxCFC5j6DwsERbEzo2aPfoutput-kPquHu3kONhcg-EUylBGXinput1",
+      "selected": false
     },
     {
       "type": "smoothstep",
@@ -160,7 +165,30 @@
       "target": "0mooTzk_LurCTq6Bg1oyy",
       "targetHandle": "VM",
       "animated": true,
-      "id": "reactflow__edge-kPquHu3kONhcg-EUylBGXoutput-0mooTzk_LurCTq6Bg1oyyVM"
+      "id": "reactflow__edge-kPquHu3kONhcg-EUylBGXoutput-0mooTzk_LurCTq6Bg1oyyVM",
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "hJOwVBS7N852ioWKuhtUG",
+      "sourceHandle": "output",
+      "target": "kPquHu3kONhcg-EUylBGX",
+      "targetHandle": "input2",
+      "animated": true,
+      "id": "reactflow__edge-hJOwVBS7N852ioWKuhtUGoutput-kPquHu3kONhcg-EUylBGXinput2",
+      "selected": false
     }
   ],
   "systemModel": {
@@ -170,5 +198,5 @@
     },
     "description": ""
   },
-  "timestamp": "2025-11-24T19:48:47.087Z"
+  "timestamp": "2026-03-05T16:20:42.764Z"
 }
