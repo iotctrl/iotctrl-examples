@@ -1,5 +1,5 @@
 {
-  "name": "PI FT MS15",
+  "name": "PI",
   "nodes": [
     {
       "id": "axUYJsL7Fs9UHb6K2m3gw",
@@ -65,11 +65,11 @@
         "label": "Função de Transferência",
         "params": {
           "numerator": [
-            0.401,
-            1.4475
+            1.4475,
+            5.36
           ],
           "denominator": [
-            0.277,
+            1,
             0
           ],
           "dt": 0.1
@@ -114,13 +114,14 @@
       "data": {
         "label": "Configuração",
         "rotation": 270,
-        "simTime": 3.01,
+        "simTime": 5.01,
         "params": {
           "simTime": 5
-        }
+        },
+        "sampleTime": 0.02
       },
       "type": "simu",
-      "width": 177,
+      "width": 176,
       "height": 252,
       "selected": false,
       "positionAbsolute": {
@@ -227,5 +228,5 @@
     },
     "description": ""
   },
-  "timestamp": "2025-12-24T12:46:20.704Z"
+  "timestamp": "2026-03-05T17:39:40.342Z"
 }
