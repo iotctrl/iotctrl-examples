@@ -31,8 +31,8 @@
     {
       "id": "R9dyw1S8oAUkB0WrFzVq8",
       "position": {
-        "x": 534.6824557048004,
-        "y": 875.8650590103891
+        "x": 256,
+        "y": 987
       },
       "data": {
         "label": "MS15",
@@ -50,8 +50,8 @@
       "height": 160,
       "selected": false,
       "positionAbsolute": {
-        "x": 534.6824557048004,
-        "y": 875.8650590103891
+        "x": 256,
+        "y": 987
       },
       "dragging": false
     },
@@ -63,14 +63,15 @@
       },
       "data": {
         "label": "Configuração",
-        "rotation": 270,
-        "simTime": 3,
+        "rotation": 0,
+        "simTime": 5,
         "params": {
           "simTime": 10
-        }
+        },
+        "sampleTime": 0.02
       },
       "type": "simu",
-      "width": 177,
+      "width": 176,
       "height": 252,
       "selected": false,
       "positionAbsolute": {
@@ -82,8 +83,8 @@
     {
       "id": "eFt_wqOUdyUkdG43vA7on",
       "position": {
-        "x": 436.0220491388918,
-        "y": 672.7316439477987
+        "x": 45,
+        "y": 702
       },
       "data": {
         "label": "Avanço de Fase",
@@ -95,13 +96,13 @@
         "rotation": 270
       },
       "type": "pl",
-      "width": 480,
+      "width": 740,
       "height": 173,
       "selected": false,
       "dragging": false,
       "positionAbsolute": {
-        "x": 436.0220491388918,
-        "y": 672.7316439477987
+        "x": 45,
+        "y": 702
       }
     }
   ],
@@ -180,5 +181,5 @@
     },
     "description": ""
   },
-  "timestamp": "2025-12-24T18:46:45.692Z"
+  "timestamp": "2026-03-10T11:10:20.950Z"
 }

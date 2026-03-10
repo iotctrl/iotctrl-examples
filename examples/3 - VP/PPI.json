@@ -4,8 +4,8 @@
     {
       "id": "QO0IDJdtE_jKTxQAlceg_",
       "position": {
-        "x": 426,
-        "y": 379
+        "x": 930,
+        "y": -3
       },
       "data": {
         "label": "Servomecanismo",
@@ -23,16 +23,16 @@
       "height": 160,
       "selected": false,
       "positionAbsolute": {
-        "x": 426,
-        "y": 379
+        "x": 930,
+        "y": -3
       },
       "dragging": false
     },
     {
       "id": "RogA5WgxWtWcfAb_oUjXu",
       "position": {
-        "x": 347.1551368902002,
-        "y": -11.06397342675077
+        "x": 839,
+        "y": -371
       },
       "data": {
         "label": "PI",
@@ -49,20 +49,20 @@
         "rotation": 180
       },
       "type": "pi",
-      "width": 480,
-      "height": 278,
+      "width": 502,
+      "height": 277,
       "selected": false,
       "positionAbsolute": {
-        "x": 347.1551368902002,
-        "y": -11.06397342675077
+        "x": 839,
+        "y": -371
       },
       "dragging": false
     },
     {
       "id": "yxYECxWsB7W_j7t4-G6f2",
       "position": {
-        "x": 55,
-        "y": -1046
+        "x": 257,
+        "y": -1038
       },
       "data": {
         "label": "Referência",
@@ -76,19 +76,19 @@
       },
       "type": "setpoint",
       "width": 346,
-      "height": 596,
+      "height": 595,
       "selected": false,
       "positionAbsolute": {
-        "x": 55,
-        "y": -1046
+        "x": 257,
+        "y": -1038
       },
       "dragging": false
     },
     {
       "id": "UWfDXJKZBlNKg9rZQH5EL",
       "position": {
-        "x": 453,
-        "y": -290
+        "x": 959,
+        "y": -646
       },
       "data": {
         "label": "Ganho",
@@ -96,20 +96,20 @@
         "rotation": 90
       },
       "type": "gain",
-      "width": 266,
+      "width": 265,
       "height": 165,
       "selected": false,
       "positionAbsolute": {
-        "x": 453,
-        "y": -290
+        "x": 959,
+        "y": -646
       },
       "dragging": false
     },
     {
       "id": "0voS5W36LNYdSweRbR6a4",
       "position": {
-        "x": 149.58648391967694,
-        "y": -123.60306676267624
+        "x": 474,
+        "y": 60
       },
       "data": {
         "label": "Subtração"
@@ -119,32 +119,33 @@
       "height": 122,
       "selected": false,
       "positionAbsolute": {
-        "x": 149.58648391967694,
-        "y": -123.60306676267624
+        "x": 474,
+        "y": 60
       },
       "dragging": false
     },
     {
       "id": "lLWdaRbF2sYYvhDm-ofND",
       "position": {
-        "x": 618,
-        "y": -1043
+        "x": 1162,
+        "y": -1039
       },
       "data": {
         "label": "Configuration",
-        "rotation": 90,
-        "simTime": 3,
+        "rotation": 180,
+        "simTime": 5,
         "params": {
           "simTime": 3
-        }
+        },
+        "sampleTime": 0.02
       },
       "type": "simu",
-      "width": 177,
+      "width": 176,
       "height": 252,
       "selected": false,
       "positionAbsolute": {
-        "x": 618,
-        "y": -1043
+        "x": 1162,
+        "y": -1039
       },
       "dragging": false
     }
@@ -290,5 +291,5 @@
     },
     "description": ""
   },
-  "timestamp": "2025-12-24T19:40:25.996Z"
+  "timestamp": "2026-03-10T11:53:33.863Z"
 }

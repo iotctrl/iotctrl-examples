@@ -4,8 +4,8 @@
     {
       "id": "UwlTfxZnpLXW3_g1pvhaw",
       "position": {
-        "x": 370,
-        "y": -452
+        "x": 426,
+        "y": -108
       },
       "data": {
         "label": "Referência",
@@ -20,11 +20,11 @@
       },
       "type": "setpoint",
       "width": 346,
-      "height": 596,
+      "height": 595,
       "selected": false,
       "positionAbsolute": {
-        "x": 370,
-        "y": -452
+        "x": 426,
+        "y": -108
       },
       "dragging": false
     },
@@ -47,8 +47,8 @@
         "rotation": 180
       },
       "type": "mfc",
-      "width": 480,
-      "height": 278,
+      "width": 740,
+      "height": 277,
       "selected": false,
       "positionAbsolute": {
         "x": 421,
@@ -59,8 +59,8 @@
     {
       "id": "R9dyw1S8oAUkB0WrFzVq8",
       "position": {
-        "x": 570.5654745372423,
-        "y": 969.1476288116856
+        "x": 632,
+        "y": 969
       },
       "data": {
         "label": "MS15",
@@ -78,32 +78,33 @@
       "height": 160,
       "selected": false,
       "positionAbsolute": {
-        "x": 570.5654745372423,
-        "y": 969.1476288116856
+        "x": 632,
+        "y": 969
       },
       "dragging": false
     },
     {
       "id": "qFoi9sh6bV32I_vShoJt-",
       "position": {
-        "x": 872,
-        "y": -360
+        "x": 958,
+        "y": -104
       },
       "data": {
         "label": "Configuration",
-        "rotation": 90,
-        "simTime": 3,
+        "rotation": 180,
+        "simTime": 5,
         "params": {
           "simTime": 3
-        }
+        },
+        "sampleTime": 0.02
       },
       "type": "simu",
-      "width": 177,
+      "width": 176,
       "height": 252,
       "selected": false,
       "positionAbsolute": {
-        "x": 872,
-        "y": -360
+        "x": 958,
+        "y": -104
       },
       "dragging": false
     }
@@ -183,5 +184,5 @@
     },
     "description": ""
   },
-  "timestamp": "2025-12-24T19:26:12.274Z"
+  "timestamp": "2026-03-10T10:50:03.265Z"
 }
