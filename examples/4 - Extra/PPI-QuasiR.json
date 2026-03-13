@@ -1,0 +1,293 @@
+{
+  "name": "PPI-QuasiR",
+  "nodes": [
+    {
+      "id": "QO0IDJdtE_jKTxQAlceg_",
+      "position": {
+        "x": 930,
+        "y": -3
+      },
+      "data": {
+        "label": "Servomecanismo",
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        },
+        "init": 0
+      },
+      "type": "ms15",
+      "width": 320,
+      "height": 160,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 930,
+        "y": -3
+      },
+      "dragging": false
+    },
+    {
+      "id": "RogA5WgxWtWcfAb_oUjXu",
+      "position": {
+        "x": 839,
+        "y": -371
+      },
+      "data": {
+        "label": "PI",
+        "params": {
+          "kp": 4.8621,
+          "ki": 0.3,
+          "kd": 0,
+          "windupEnabled": true,
+          "windup": 5,
+          "deadband_in": 0,
+          "deadband_out": 0,
+          "N": 20
+        },
+        "rotation": 180
+      },
+      "type": "pi",
+      "width": 502,
+      "height": 277,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 839,
+        "y": -371
+      },
+      "dragging": false
+    },
+    {
+      "id": "yxYECxWsB7W_j7t4-G6f2",
+      "position": {
+        "x": 157,
+        "y": -1068
+      },
+      "data": {
+        "label": "Referência",
+        "outputType": "custom",
+        "parameters": {
+          "function": "2*Math.sin(0.4*t) + 0.5*Math.sin(1.5*t)"
+        },
+        "rotation": 270
+      },
+      "type": "setpoint",
+      "width": 450,
+      "height": 453,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 157,
+        "y": -1068
+      },
+      "dragging": false
+    },
+    {
+      "id": "UWfDXJKZBlNKg9rZQH5EL",
+      "position": {
+        "x": 959,
+        "y": -646
+      },
+      "data": {
+        "label": "Ganho",
+        "gain": 0.4916,
+        "rotation": 90
+      },
+      "type": "gain",
+      "width": 265,
+      "height": 165,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 959,
+        "y": -646
+      },
+      "dragging": false
+    },
+    {
+      "id": "0voS5W36LNYdSweRbR6a4",
+      "position": {
+        "x": 474,
+        "y": 60
+      },
+      "data": {
+        "label": "Subtração"
+      },
+      "type": "subtraction",
+      "width": 160,
+      "height": 122,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 474,
+        "y": 60
+      },
+      "dragging": false
+    },
+    {
+      "id": "lLWdaRbF2sYYvhDm-ofND",
+      "position": {
+        "x": 1162,
+        "y": -1039
+      },
+      "data": {
+        "label": "Configuration",
+        "rotation": 270,
+        "simTime": 40,
+        "params": {
+          "simTime": 3
+        },
+        "sampleTime": 0.02
+      },
+      "type": "simu",
+      "width": 176,
+      "height": 252,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1162,
+        "y": -1039
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "QO0IDJdtE_jKTxQAlceg_",
+      "sourceHandle": "VT",
+      "target": "RogA5WgxWtWcfAb_oUjXu",
+      "targetHandle": "feedback",
+      "animated": true,
+      "id": "reactflow__edge-QO0IDJdtE_jKTxQAlceg_VT-RogA5WgxWtWcfAb_oUjXufeedback",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "yxYECxWsB7W_j7t4-G6f2",
+      "sourceHandle": "output",
+      "target": "0voS5W36LNYdSweRbR6a4",
+      "targetHandle": "input1",
+      "animated": true,
+      "id": "reactflow__edge-yxYECxWsB7W_j7t4-G6f2output-0voS5W36LNYdSweRbR6a4input1",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "QO0IDJdtE_jKTxQAlceg_",
+      "sourceHandle": "VP",
+      "target": "0voS5W36LNYdSweRbR6a4",
+      "targetHandle": "input2",
+      "animated": true,
+      "id": "reactflow__edge-QO0IDJdtE_jKTxQAlceg_VP-0voS5W36LNYdSweRbR6a4input2",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "0voS5W36LNYdSweRbR6a4",
+      "sourceHandle": "output",
+      "target": "UWfDXJKZBlNKg9rZQH5EL",
+      "targetHandle": "input",
+      "animated": true,
+      "id": "reactflow__edge-0voS5W36LNYdSweRbR6a4output-UWfDXJKZBlNKg9rZQH5ELinput",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "UWfDXJKZBlNKg9rZQH5EL",
+      "sourceHandle": "output",
+      "target": "RogA5WgxWtWcfAb_oUjXu",
+      "targetHandle": "setpoint",
+      "animated": true,
+      "id": "reactflow__edge-UWfDXJKZBlNKg9rZQH5ELoutput-RogA5WgxWtWcfAb_oUjXusetpoint",
+      "selected": false
+    },
+    {
+      "type": "step",
+      "style": {
+        "stroke": "#555",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#555"
+      },
+      "pathOptions": {
+        "offset": 20,
+        "borderRadius": 0
+      },
+      "source": "RogA5WgxWtWcfAb_oUjXu",
+      "sourceHandle": "output",
+      "target": "QO0IDJdtE_jKTxQAlceg_",
+      "targetHandle": "VM",
+      "animated": true,
+      "id": "reactflow__edge-RogA5WgxWtWcfAb_oUjXuoutput-QO0IDJdtE_jKTxQAlceg_VM",
+      "selected": false
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {
+      "mass": 1
+    },
+    "description": ""
+  },
+  "timestamp": "2026-03-13T01:58:14.166Z"
+}

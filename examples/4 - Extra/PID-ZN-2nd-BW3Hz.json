@@ -1,0 +1,224 @@
+{
+  "name": "PID-ZN-2nd-order-Butterworth-3-Hz",
+  "nodes": [
+    {
+      "id": "a1b2c3d4-e5f6-4789-a123-456789abcdef",
+      "type": "setpoint",
+      "position": {
+        "x": 659,
+        "y": -523
+      },
+      "data": {
+        "label": "Desired Speed (Setpoint)",
+        "outputType": "step",
+        "defaultParams": {
+          "initialValue": 0,
+          "stepValue": 10,
+          "stepTime": 5
+        },
+        "parameters": {
+          "stepValue": 2.5,
+          "stepTime": 1
+        },
+        "rotation": 180
+      },
+      "width": 346,
+      "height": 596,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 659,
+        "y": -523
+      },
+      "dragging": false
+    },
+    {
+      "id": "b2c3d4e5-f6a7-4890-b234-567890abcdef0",
+      "type": "pid",
+      "position": {
+        "x": 591.6053210335384,
+        "y": 293.82638681331366
+      },
+      "data": {
+        "label": "Speed Controller (PID)",
+        "Kc": 1.5,
+        "Ti": 0.2,
+        "Td": 0.1,
+        "windup": 10,
+        "deadband_in": 0.01,
+        "deadband_out": 0.01,
+        "N": 10,
+        "params": {
+          "Kc": 1.71,
+          "Ti": 0.19,
+          "Td": 0.048,
+          "windupEnabled": true,
+          "windup": 5,
+          "deadband_in": 0,
+          "deadband_out": 0,
+          "N": 20
+        },
+        "rotation": 0
+      },
+      "width": 680,
+      "height": 277,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 591.6053210335384,
+        "y": 293.82638681331366
+      },
+      "dragging": false
+    },
+    {
+      "id": "c3d4e5f6-a7b8-4901-c345-67890abcdef01",
+      "type": "ms15",
+      "position": {
+        "x": 672,
+        "y": 698
+      },
+      "data": {
+        "label": "Servomechanism (Plant)",
+        "lowerLimit": -12,
+        "upperLimit": 12,
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        },
+        "init": 0
+      },
+      "width": 320,
+      "height": 160,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 672,
+        "y": 698
+      },
+      "dragging": false
+    },
+    {
+      "id": "MDFvUT2MPJeCDiJ7-7gj-",
+      "position": {
+        "x": 1024,
+        "y": -520
+      },
+      "data": {
+        "label": "Configuration",
+        "rotation": 90,
+        "simTime": 3,
+        "params": {
+          "simTime": 3
+        }
+      },
+      "type": "simu",
+      "width": 176,
+      "height": 252,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1024,
+        "y": -520
+      },
+      "dragging": false
+    },
+    {
+      "id": "C2xpI4-UglX2-_sCglx_c",
+      "position": {
+        "x": 74,
+        "y": 500
+      },
+      "data": {
+        "label": "Transfer Function",
+        "params": {
+          "numerator": [
+            355
+          ],
+          "denominator": [
+            1,
+            26.7,
+            355
+          ],
+          "dt": 0.1
+        },
+        "rotation": 270
+      },
+      "type": "transfer",
+      "width": 296,
+      "height": 444,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 74,
+        "y": 500
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "d4e5f6a7-b8c9-4012-d456-7890abcdef012",
+      "source": "a1b2c3d4-e5f6-4789-a123-456789abcdef",
+      "target": "b2c3d4e5-f6a7-4890-b234-567890abcdef0",
+      "sourceHandle": "output",
+      "targetHandle": "setpoint",
+      "type": "step",
+      "selected": false
+    },
+    {
+      "id": "e5f6a7b8-c9d0-4123-e567-890abcdef0123",
+      "source": "b2c3d4e5-f6a7-4890-b234-567890abcdef0",
+      "target": "c3d4e5f6-a7b8-4901-c345-67890abcdef01",
+      "sourceHandle": "output",
+      "targetHandle": "VM",
+      "type": "step",
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "c3d4e5f6-a7b8-4901-c345-67890abcdef01",
+      "sourceHandle": "VT",
+      "target": "C2xpI4-UglX2-_sCglx_c",
+      "targetHandle": "input",
+      "animated": true,
+      "id": "reactflow__edge-c3d4e5f6-a7b8-4901-c345-67890abcdef01VT-C2xpI4-UglX2-_sCglx_cinput"
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "C2xpI4-UglX2-_sCglx_c",
+      "sourceHandle": "output",
+      "target": "b2c3d4e5-f6a7-4890-b234-567890abcdef0",
+      "targetHandle": "feedback",
+      "animated": true,
+      "id": "reactflow__edge-C2xpI4-UglX2-_sCglx_coutput-b2c3d4e5-f6a7-4890-b234-567890abcdef0feedback"
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {},
+    "description": "A basic closed-loop speed control system using a PID controller to regulate the speed of a servomechanism based on a step setpoint."
+  },
+  "timestamp": "2026-03-03T15:18:39.401Z"
+}
