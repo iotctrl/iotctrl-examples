@@ -1,5 +1,5 @@
 {
-  "name": "PID_CHR_NOS",
+  "name": "PID",
   "nodes": [
     {
       "id": "a1b2c3d4-e5f6-4789-a123-456789abcdef",
@@ -23,7 +23,7 @@
         "rotation": 180
       },
       "width": 346,
-      "height": 596,
+      "height": 595,
       "selected": false,
       "positionAbsolute": {
         "x": 659,
@@ -35,8 +35,8 @@
       "id": "b2c3d4e5-f6a7-4890-b234-567890abcdef0",
       "type": "pid",
       "position": {
-        "x": 591.6053210335384,
-        "y": 293.82638681331366
+        "x": 458,
+        "y": 178
       },
       "data": {
         "label": "Speed Controller (PID)",
@@ -48,23 +48,23 @@
         "deadband_out": 0.01,
         "N": 10,
         "params": {
-          "Kc": 1.2,
-          "Ti": 0.25,
-          "Td": 0.03,
+          "Kc": 2,
+          "Ti": 0.27,
+          "Td": 0.027,
           "windupEnabled": true,
           "windup": 5,
           "deadband_in": 0,
           "deadband_out": 0,
           "N": 20
         },
-        "rotation": 0
+        "rotation": 90
       },
-      "width": 480,
-      "height": 278,
+      "width": 747,
+      "height": 277,
       "selected": false,
       "positionAbsolute": {
-        "x": 591.6053210335384,
-        "y": 293.82638681331366
+        "x": 458,
+        "y": 178
       },
       "dragging": false
     },
@@ -72,8 +72,8 @@
       "id": "c3d4e5f6-a7b8-4901-c345-67890abcdef01",
       "type": "ms15",
       "position": {
-        "x": 672,
-        "y": 698
+        "x": 1442,
+        "y": 380
       },
       "data": {
         "label": "Servomechanism (Plant)",
@@ -92,8 +92,8 @@
       "height": 160,
       "selected": false,
       "positionAbsolute": {
-        "x": 672,
-        "y": 698
+        "x": 1442,
+        "y": 380
       },
       "dragging": false
     },
@@ -105,14 +105,15 @@
       },
       "data": {
         "label": "Configuration",
-        "rotation": 90,
-        "simTime": 3,
+        "rotation": 180,
+        "simTime": 5,
         "params": {
           "simTime": 3
-        }
+        },
+        "sampleTime": 0.02
       },
       "type": "simu",
-      "width": 177,
+      "width": 176,
       "height": 252,
       "selected": false,
       "positionAbsolute": {
@@ -156,5 +157,5 @@
     "parameters": {},
     "description": "A basic closed-loop speed control system using a PID controller to regulate the speed of a servomechanism based on a step setpoint."
   },
-  "timestamp": "2025-12-24T18:43:51.591Z"
+  "timestamp": "2026-04-04T01:00:15.398Z"
 }

@@ -47,7 +47,7 @@
       },
       "type": "setpoint",
       "width": 346,
-      "height": 596,
+      "height": 595,
       "selected": false,
       "positionAbsolute": {
         "x": -360.40241069398377,
@@ -77,7 +77,7 @@
         "rotation": 0
       },
       "type": "transfer",
-      "width": 296,
+      "width": 298,
       "height": 444,
       "selected": false,
       "positionAbsolute": {
@@ -113,8 +113,8 @@
       },
       "data": {
         "label": "Configuração",
-        "rotation": 270,
-        "simTime": 5.01,
+        "rotation": 0,
+        "simTime": 5,
         "params": {
           "simTime": 5
         },
@@ -228,5 +228,5 @@
     },
     "description": ""
   },
-  "timestamp": "2026-03-05T17:39:40.342Z"
+  "timestamp": "2026-04-04T00:44:31.974Z"
 }
