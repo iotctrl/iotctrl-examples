@@ -37,19 +37,19 @@
       "data": {
         "label": "PI",
         "params": {
-          "kp": 4.8621,
-          "ki": 0.3,
+          "kp": 4.5748,
+          "ki": 0.27,
           "kd": 0,
-          "windupEnabled": true,
-          "windup": 5,
+          "windupEnabled": false,
+          "windup": 0,
           "deadband_in": 0,
           "deadband_out": 0,
           "N": 20
         },
-        "rotation": 180
+        "rotation": 270
       },
       "type": "pi",
-      "width": 502,
+      "width": 507,
       "height": 277,
       "selected": false,
       "positionAbsolute": {
@@ -96,7 +96,7 @@
         "rotation": 90
       },
       "type": "gain",
-      "width": 265,
+      "width": 267,
       "height": 165,
       "selected": false,
       "positionAbsolute": {
@@ -291,5 +291,5 @@
     },
     "description": ""
   },
-  "timestamp": "2026-03-10T11:53:33.863Z"
+  "timestamp": "2026-04-04T11:33:04.671Z"
 }

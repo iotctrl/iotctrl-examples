@@ -4,8 +4,8 @@
     {
       "id": "UwlTfxZnpLXW3_g1pvhaw",
       "position": {
-        "x": 240,
-        "y": 18
+        "x": -314,
+        "y": 0
       },
       "data": {
         "label": "Referência",
@@ -20,19 +20,19 @@
       },
       "type": "setpoint",
       "width": 346,
-      "height": 596,
+      "height": 595,
       "selected": false,
       "positionAbsolute": {
-        "x": 240,
-        "y": 18
+        "x": -314,
+        "y": 0
       },
       "dragging": false
     },
     {
       "id": "R9dyw1S8oAUkB0WrFzVq8",
       "position": {
-        "x": 256,
-        "y": 987
+        "x": 620,
+        "y": 489
       },
       "data": {
         "label": "MS15",
@@ -50,16 +50,16 @@
       "height": 160,
       "selected": false,
       "positionAbsolute": {
-        "x": 256,
-        "y": 987
+        "x": 620,
+        "y": 489
       },
       "dragging": false
     },
     {
       "id": "4DzkXovVeOJJBPf5z3PJv",
       "position": {
-        "x": 740,
-        "y": 42
+        "x": 104,
+        "y": 4
       },
       "data": {
         "label": "Configuração",
@@ -75,34 +75,34 @@
       "height": 252,
       "selected": false,
       "positionAbsolute": {
-        "x": 740,
-        "y": 42
+        "x": 104,
+        "y": 4
       },
       "dragging": false
     },
     {
       "id": "eFt_wqOUdyUkdG43vA7on",
       "position": {
-        "x": 45,
-        "y": 702
+        "x": 407,
+        "y": 48
       },
       "data": {
         "label": "Avanço de Fase",
         "params": {
-          "alpha": 3.333,
-          "beta": 14.9104,
-          "kc": 2.3903
+          "alpha": 3.7,
+          "beta": 14.91,
+          "kc": 2.25
         },
         "rotation": 270
       },
       "type": "pl",
-      "width": 740,
+      "width": 747,
       "height": 173,
       "selected": false,
       "dragging": false,
       "positionAbsolute": {
-        "x": 45,
-        "y": 702
+        "x": 407,
+        "y": 48
       }
     }
   ],
@@ -181,5 +181,5 @@
     },
     "description": ""
   },
-  "timestamp": "2026-03-10T11:10:20.950Z"
+  "timestamp": "2026-04-04T11:26:11.775Z"
 }
