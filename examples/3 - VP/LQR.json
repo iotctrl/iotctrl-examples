@@ -1,0 +1,328 @@
+{
+  "name": "LQR",
+  "nodes": [
+    {
+      "id": "WR7pDKNW4VoDGw1r1HAe5",
+      "position": {
+        "x": 51,
+        "y": 562
+      },
+      "data": {
+        "label": "Servomechanism",
+        "params": {
+          "K": 50,
+          "T": 0.27,
+          "n": 0.111,
+          "Kt": 0.017,
+          "Kp": 1.7
+        },
+        "init": 0
+      },
+      "type": "ms15",
+      "width": 320,
+      "height": 160,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 51,
+        "y": 562
+      },
+      "dragging": false
+    },
+    {
+      "id": "EPLmQCwNviUNljoeGjO_6",
+      "position": {
+        "x": -739,
+        "y": 204
+      },
+      "data": {
+        "label": "Setpoint",
+        "outputType": "step",
+        "parameters": {
+          "initialValue": 0,
+          "stepValue": 2.5,
+          "stepTime": 1
+        },
+        "rotation": 0
+      },
+      "type": "setpoint",
+      "width": 346,
+      "height": 595,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -739,
+        "y": 204
+      },
+      "dragging": false
+    },
+    {
+      "id": "YGHGkRbd6WU1MHYHQy8dR",
+      "position": {
+        "x": 256,
+        "y": 211
+      },
+      "data": {
+        "label": "Configuration",
+        "rotation": 270,
+        "simTime": 5,
+        "params": {
+          "simTime": 3,
+          "sampleTime": 0.02
+        },
+        "sampleTime": 0.02
+      },
+      "type": "simu",
+      "width": 176,
+      "height": 252,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 256,
+        "y": 211
+      },
+      "dragging": false
+    },
+    {
+      "id": "YE5TMhRYA6t4VsrBwHrDu",
+      "position": {
+        "x": -309,
+        "y": 264
+      },
+      "data": {
+        "label": "Gain",
+        "gain": 2.25,
+        "rotation": 0
+      },
+      "type": "gain",
+      "width": 265,
+      "height": 165,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -309,
+        "y": 264
+      },
+      "dragging": false
+    },
+    {
+      "id": "VpRYvl0enANqt7EyczOwj",
+      "position": {
+        "x": 78,
+        "y": 862
+      },
+      "data": {
+        "label": "Gain",
+        "gain": -3.44,
+        "rotation": 270
+      },
+      "type": "gain",
+      "width": 265,
+      "height": 165,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 78,
+        "y": 862
+      },
+      "dragging": false
+    },
+    {
+      "id": "woUtMiAYf8bxNk8iSziMA",
+      "position": {
+        "x": -564,
+        "y": 949
+      },
+      "data": {
+        "label": "Subtraction"
+      },
+      "type": "subtraction",
+      "width": 160,
+      "height": 122,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -564,
+        "y": 949
+      },
+      "dragging": false
+    },
+    {
+      "id": "TCBRyConHHNzktLQRZm7s",
+      "position": {
+        "x": -256,
+        "y": 637
+      },
+      "data": {
+        "label": "Sum"
+      },
+      "type": "sum",
+      "width": 160,
+      "height": 104,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -256,
+        "y": 637
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "EPLmQCwNviUNljoeGjO_6",
+      "sourceHandle": "output",
+      "target": "woUtMiAYf8bxNk8iSziMA",
+      "targetHandle": "input1",
+      "animated": true,
+      "id": "reactflow__edge-EPLmQCwNviUNljoeGjO_6output-woUtMiAYf8bxNk8iSziMAinput1",
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "WR7pDKNW4VoDGw1r1HAe5",
+      "sourceHandle": "VP",
+      "target": "woUtMiAYf8bxNk8iSziMA",
+      "targetHandle": "input2",
+      "animated": true,
+      "id": "reactflow__edge-WR7pDKNW4VoDGw1r1HAe5VP-woUtMiAYf8bxNk8iSziMAinput2",
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "woUtMiAYf8bxNk8iSziMA",
+      "sourceHandle": "output",
+      "target": "YE5TMhRYA6t4VsrBwHrDu",
+      "targetHandle": "input",
+      "animated": true,
+      "id": "reactflow__edge-woUtMiAYf8bxNk8iSziMAoutput-YE5TMhRYA6t4VsrBwHrDuinput",
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "WR7pDKNW4VoDGw1r1HAe5",
+      "sourceHandle": "VT",
+      "target": "VpRYvl0enANqt7EyczOwj",
+      "targetHandle": "input",
+      "animated": true,
+      "id": "reactflow__edge-WR7pDKNW4VoDGw1r1HAe5VT-VpRYvl0enANqt7EyczOwjinput",
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "VpRYvl0enANqt7EyczOwj",
+      "sourceHandle": "output",
+      "target": "TCBRyConHHNzktLQRZm7s",
+      "targetHandle": "input2",
+      "animated": true,
+      "id": "reactflow__edge-VpRYvl0enANqt7EyczOwjoutput-TCBRyConHHNzktLQRZm7sinput2",
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "YE5TMhRYA6t4VsrBwHrDu",
+      "sourceHandle": "output",
+      "target": "TCBRyConHHNzktLQRZm7s",
+      "targetHandle": "input1",
+      "animated": true,
+      "id": "reactflow__edge-YE5TMhRYA6t4VsrBwHrDuoutput-TCBRyConHHNzktLQRZm7sinput1",
+      "selected": false
+    },
+    {
+      "type": "smoothstep",
+      "style": {
+        "stroke": "var(--edge-stroke-color)",
+        "strokeWidth": 5
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "var(--edge-arrow-color)"
+      },
+      "pathOptions": {
+        "offset": 40,
+        "borderRadius": 0
+      },
+      "source": "TCBRyConHHNzktLQRZm7s",
+      "sourceHandle": "output",
+      "target": "WR7pDKNW4VoDGw1r1HAe5",
+      "targetHandle": "VM",
+      "animated": true,
+      "id": "reactflow__edge-TCBRyConHHNzktLQRZm7soutput-WR7pDKNW4VoDGw1r1HAe5VM",
+      "selected": false
+    }
+  ],
+  "systemModel": {
+    "type": "default",
+    "parameters": {
+      "mass": 1
+    },
+    "description": ""
+  },
+  "timestamp": "2026-04-12T12:11:57.468Z"
+}
